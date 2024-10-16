@@ -1,3 +1,5 @@
+# swarm/swarm/core.py
+
 # Standard library imports
 import copy
 import json
@@ -24,9 +26,9 @@ __CTX_VARS_NAME__ = "context_variables"
 
 
 class Swarm:
-    def __init__(self, client=None):
+    def __init__(self, client=None, api_key=None):
         if not client:
-            client = OpenAI()
+            client = OpenAI(api_key=api_key)
         self.client = client
 
     def get_chat_completion(
