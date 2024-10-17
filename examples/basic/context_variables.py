@@ -21,7 +21,10 @@ agent = Agent(
     functions=[print_account_details],
 )
 
-context_variables = {"name": "James", "user_id": 123}
+context_variables = {
+    "name": "James", 
+    "user_id": 123
+    }
 
 response = client.run(
     messages=[{"role": "user", "content": "Hi!"}],
